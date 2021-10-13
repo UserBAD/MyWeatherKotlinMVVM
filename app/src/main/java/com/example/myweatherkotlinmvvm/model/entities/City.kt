@@ -1,6 +1,11 @@
 package com.example.myweatherkotlinmvvm.model.entities
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class City(
-val city: String,
-val lat: Double,
-val lon: Double)
+    val city: String,
+    val lat: Double,
+    val lon: Double
+) : Parcelable
