@@ -2,6 +2,7 @@ package com.example.myweatherkotlinmvvm
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.myweatherkotlinmvvm.framework.ui.details.DetailsFragment
 import com.example.myweatherkotlinmvvm.framework.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
