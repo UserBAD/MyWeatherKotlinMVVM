@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.myweatherkotlinmvvm.AppState
 import com.example.myweatherkotlinmvvm.R
 import com.example.myweatherkotlinmvvm.databinding.MainFragmentBinding
+import com.example.myweatherkotlinmvvm.di.showSnackBar
 import com.example.myweatherkotlinmvvm.framework.ui.adapters.MainFragmentAdapter
 import com.example.myweatherkotlinmvvm.framework.ui.details.DetailsFragment
 import com.example.myweatherkotlinmvvm.model.entities.Weather
@@ -85,14 +86,13 @@ class MainFragment : Fragment() {
             }
             is AppState.Error -> {
                 mainFragmentLoadingLayout.visibility = View.GONE
-                Snackbar
-                    .make(
-                        binding.mainFragmentFAB,
-                        getString(R.string.error),
-                        Snackbar.LENGTH_INDEFINITE
-                    )
-                    .setAction(getString(R.string.reload)) { viewModel.getWeatherFromLocalStorageRus() }
-                    .show()
+
+                mainFragmentFAB.showSnackBar(
+                    getString(R.string.error),
+                    getString(R.string.reload)
+                ) {
+                    viewModel.getWeatherFromLocalStorageRus()
+                }
             }
         }
     }
