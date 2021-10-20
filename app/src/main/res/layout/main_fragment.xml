@@ -18,13 +18,15 @@
         android:id="@+id/mainFragmentFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="@dimen/layout_16dp"
+        android:layout_marginBottom="@dimen/layout_16dp"
+        android:backgroundTint="@android:color/transparent"
         android:contentDescription="@string/change_cities_list"
         android:src="@drawable/ic_russia"
         android:tint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/imagesize_57dp" />
 
     <FrameLayout
         android:id="@+id/mainFragmentLoadingLayout"
