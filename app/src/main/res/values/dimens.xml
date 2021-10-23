@@ -11,5 +11,5 @@
     <dimen name="layout_16dp">16dp</dimen>
     <dimen name="layout_5dp">5dp</dimen>
     <dimen name="imagesize_57dp">57dp</dimen>
-
+    <dimen name="main_container_text_size">10sp</dimen>
 </resources>
