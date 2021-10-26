@@ -1,8 +1,12 @@
 package com.example.myweatherkotlinmvvm.model.rest_entities
 
+import com.google.gson.annotations.SerializedName
+
 data class FactDTO(
     val temp: Int?,
-    val feels_like: Int?,
+    @SerializedName("feels_like")
+    val feelslike: Int?,
+
     val condition: String?
 )
 

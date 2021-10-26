@@ -3,14 +3,15 @@ package com.example.myweatherkotlinmvvm.model.entities.repository
 import com.example.myweatherkotlinmvvm.model.WeatherLoader
 import com.example.myweatherkotlinmvvm.model.entities.City
 import com.example.myweatherkotlinmvvm.model.entities.Weather
+import com.example.myweatherkotlinmvvm.model.rest.WeatherRepo
 
 
 class RepositoryImpl : Repository {
     override fun getWeatherFromServer(lat: Double, lng: Double): Weather {
-        val dto = WeatherLoader.loadWeather(lat, lng)
+        val dto = WeatherRepo.api.getWeather(lat, lng).execute().body()
         return Weather(
             temperature = dto?.fact?.temp ?: 0,
-            feelsLike = dto?.fact?.feels_like ?: 0,
+            feelsLike = dto?.fact?.feelslike ?: 0,
             condition = dto?.fact?.condition
         )
     }
