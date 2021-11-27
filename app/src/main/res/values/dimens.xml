@@ -14,4 +14,6 @@
     <dimen name="main_container_text_size">10sp</dimen>
     <dimen name="layout_75dp">75dp</dimen>
     <dimen name="layout_0dp">0dp</dimen>
+    <dimen name="layout_1dp">1dp</dimen>
+
 </resources>
