@@ -9,6 +9,7 @@ import com.example.myweatherkotlinmvvm.framework.ui.contacts_fragment.ContactsFr
 import com.example.myweatherkotlinmvvm.framework.ui.details.DetailsFragment
 import com.example.myweatherkotlinmvvm.framework.ui.history.HistoryFragment
 import com.example.myweatherkotlinmvvm.framework.ui.main.MainFragment
+import com.example.myweatherkotlinmvvm.framework.ui.maps.MapsFragment
 import com.example.myweatherkotlinmvvm.framework.ui.threads.ThreadsFragment
 
 class MainActivity : AppCompatActivity() {
@@ -42,6 +43,11 @@ class MainActivity : AppCompatActivity() {
                 openFragment(ContactsFragment.newInstance())
                 true
             }
+            R.id.menu_google_maps -> {
+                openFragment(MapsFragment.newInstance())
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
