@@ -15,5 +15,7 @@
     <dimen name="layout_75dp">75dp</dimen>
     <dimen name="layout_0dp">0dp</dimen>
     <dimen name="layout_1dp">1dp</dimen>
+    <dimen name="fab_location_icon_size">45dp</dimen>
+    <dimen name="layout_15dp">15dp</dimen>
 
 </resources>
