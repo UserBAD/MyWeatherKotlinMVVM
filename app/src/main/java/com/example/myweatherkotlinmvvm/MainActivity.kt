@@ -2,8 +2,10 @@ package com.example.myweatherkotlinmvvm
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.myweatherkotlinmvvm.framework.ui.contacts_fragment.ContactsFragment
 import com.example.myweatherkotlinmvvm.framework.ui.details.DetailsFragment
@@ -11,6 +13,8 @@ import com.example.myweatherkotlinmvvm.framework.ui.history.HistoryFragment
 import com.example.myweatherkotlinmvvm.framework.ui.main.MainFragment
 import com.example.myweatherkotlinmvvm.framework.ui.maps.MapsFragment
 import com.example.myweatherkotlinmvvm.framework.ui.threads.ThreadsFragment
+
+private const val ticketIdKey = "ticketId"
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +25,10 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
+
+
+            val ticketId = intent.extras?.getString(ticketIdKey, "no value") ?: "no value"
+            Toast.makeText(applicationContext, ticketId, Toast.LENGTH_SHORT).show()
         }
     }
 
