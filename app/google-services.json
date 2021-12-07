@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "620782431309",
+    "project_id": "myweatherkotlinmvvm",
+    "storage_bucket": "myweatherkotlinmvvm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620782431309:android:1b80fb929be7fccea64004",
+        "android_client_info": {
+          "package_name": "com.example.myweatherkotlinmvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620782431309-f7235uf6dafhfiq300r4v2pg1hjhd0o8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAILefrf9hacbuFdSlxZyKmG24kODHIZDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620782431309-f7235uf6dafhfiq300r4v2pg1hjhd0o8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
