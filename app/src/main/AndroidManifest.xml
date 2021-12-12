@@ -60,8 +60,8 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".services.MessagingService">
-            android:exported="true"
+        <service android:name=".services.MessagingService"
+            android:exported="true">
             <intent-filter>
             <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
         </intent-filter></service>
